@@ -6,7 +6,7 @@ Builder.prototype.plus = function (...items) {
   items.forEach((item) => {
     this.value += item;
   });
-  return this.value;
+  return this;
 };
 
 Builder.prototype.minus = function (...items) {
@@ -17,7 +17,7 @@ Builder.prototype.minus = function (...items) {
       this.value = this.value.slice(0, -item);
     }
   });
-  return this.value;
+  return this;
 };
 
 Builder.prototype.multiply = function (item) {
@@ -26,7 +26,7 @@ Builder.prototype.multiply = function (item) {
   } else if (typeof this.value === "string") {
     this.value = this.value.repeat(item);
   }
-  return this.value;
+  return this;
 };
 
 Builder.prototype.divider = function (item) {
@@ -36,11 +36,11 @@ Builder.prototype.divider = function (item) {
     let quantityFiestSimble = Math.floor(this.value.length / item);
     this.value = this.value.substring(0, quantityFiestSimble);
   }
-  return this.value;
+  return this;
 };
 
 Builder.prototype.get = function () {
-  return this.value;
+  return this;
 };
 
 export default Builder;
