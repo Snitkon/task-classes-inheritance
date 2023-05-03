@@ -1,4 +1,4 @@
-import Builder from "./builder_class.js";
+import Builder from "./builder.js";
 
 function extend(child, parent) {
   child.prototype = Object.create(parent.prototype);

@@ -1,5 +1,5 @@
-import IntBuilder from "./int-builder_class.js";
-import StringBuilder from "./string-builder_class.js";
+import IntBuilder from "./int-builder.js";
+import StringBuilder from "./string-builder.js";
 
 //Example
 console.log(IntBuilder.random(10,100))
